@@ -19,7 +19,12 @@ test("peek on stack with two or more elements returns the top element", () => {
 });
 
 test("pop on stack with one element returns that element and checks so stack is empty", () => {
+  //remove from earlier tests
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  stack.pop();
   stack.push(1);
-  expect(stack.pop()).toBe(0); //fel med vilje
+  expect(stack.pop()).toBe(1);
   expect(stack.peek()).toBeUndefined();
 });
